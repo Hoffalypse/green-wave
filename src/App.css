@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #004d31 0%, #006341 50%, #005538 100%);
+  background: linear-gradient(135deg, #003d28 0%, #005538 30%, #006341 55%, #2a7da8 85%, #1a6a94 100%);
   box-sizing: border-box;
 }
 
@@ -19,11 +19,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 40px;
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, #006341, #4B9CD3, #006341) 1;
 }
 
 .header-logo {
@@ -58,11 +60,14 @@
 }
 
 .nav-link-active {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(75, 156, 211, 0.35);
+  box-shadow: 0 0 0 1px rgba(75, 156, 211, 0.5);
 }
 
 .mission-card {
-  background: #ffffff;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, #006341, #4B9CD3) border-box;
+  border: 4px solid transparent;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   max-width: 680px;
@@ -72,7 +77,10 @@
 }
 
 .mission-title {
-  color: #006341;
+  background: linear-gradient(90deg, #006341, #4B9CD3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 1.9rem;
   font-weight: 700;
   margin: 0 0 24px;
@@ -185,23 +193,26 @@ h1 {
 }
 
 .home-hero {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(75, 156, 211, 0.35);
   backdrop-filter: blur(6px);
   border-radius: 16px;
   padding: 56px 48px;
   text-align: center;
   width: 100%;
+  box-shadow: 0 0 40px rgba(75, 156, 211, 0.15), inset 0 1px 0 rgba(75, 156, 211, 0.2);
 }
 
 .home-title {
-  color: #ffffff;
+  background: linear-gradient(90deg, #ffffff 0%, #a8d8f0 60%, #4B9CD3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 2.6rem;
   font-weight: 800;
   margin: 0 0 24px;
   letter-spacing: -0.5px;
   line-height: 1.2;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .home-hero .divider {
@@ -231,7 +242,7 @@ h1 {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
-  border: 3px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(75, 156, 211, 0.4);
   flex-shrink: 0;
 }
 
@@ -253,6 +264,7 @@ h1 {
   z-index: 3;
   position: relative;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+  border: 3px solid rgba(75, 156, 211, 0.8);
 }
 
 .home-img-right {
@@ -295,7 +307,9 @@ h1 {
 }
 
 .about-header-card {
-  background: #ffffff;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, #006341, #4B9CD3) border-box;
+  border: 4px solid transparent;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -311,7 +325,9 @@ h1 {
 }
 
 .staff-card {
-  background: #ffffff;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, #006341, #4B9CD3) border-box;
+  border: 3px solid transparent;
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   padding: 36px 28px;
@@ -321,7 +337,7 @@ h1 {
 .staff-avatar {
   width: 56px;
   height: 56px;
-  background: #006341;
+  background: linear-gradient(135deg, #006341, #4B9CD3);
   color: #ffffff;
   font-size: 1.4rem;
   font-weight: 700;
@@ -330,10 +346,14 @@ h1 {
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px;
+  box-shadow: 0 4px 14px rgba(75, 156, 211, 0.4);
 }
 
 .staff-name {
-  color: #006341;
+  background: linear-gradient(90deg, #006341, #4B9CD3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 1.15rem;
   font-weight: 700;
   margin: 0 0 12px;
@@ -357,7 +377,9 @@ h1 {
 }
 
 .other-employees-card {
-  background: #ffffff;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, #4B9CD3, #006341) border-box;
+  border: 3px solid transparent;
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -382,9 +404,9 @@ h1 {
 }
 
 .employee-chip {
-  background: #f0f7f4;
-  border: 1px solid #c0ddd0;
-  color: #004d31;
+  background: linear-gradient(135deg, #e8f4fb, #ddf0e8);
+  border: 1px solid #a0c8e8;
+  color: #1a5f8a;
   font-size: 0.9rem;
   font-weight: 600;
   padding: 6px 18px;
@@ -412,7 +434,9 @@ h1 {
 }
 
 .services-header-card {
-  background: #ffffff;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, #006341, #4B9CD3) border-box;
+  border: 4px solid transparent;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -500,7 +524,10 @@ h1 {
 }
 
 .service-title {
-  color: #006341;
+  background: linear-gradient(90deg, #006341, #4B9CD3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0 0 12px;
