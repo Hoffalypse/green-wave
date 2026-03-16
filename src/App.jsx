@@ -227,7 +227,7 @@ export default function App() {
 
   return (
     <div className="page">
-      <header className="header">
+<header className="header">
         <img
           src="/green-wave.jpg"
           alt="Green Wave Consulting"
@@ -248,9 +248,34 @@ export default function App() {
         </nav>
       </header>
 
-      <main className="main-content">
+      <div className="wave-divider">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,60 C180,10 360,110 540,60 C720,10 900,110 1080,60 C1260,10 1350,90 1440,60 L1440,0 L0,0 Z" fill="rgba(0,0,0,0.25)" />
+          <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,20 1200,55 C1320,75 1380,35 1440,40 L1440,0 L0,0 Z" fill="rgba(75,156,211,0.3)" />
+          <path d="M0,25 C240,60 480,0 720,30 C960,60 1200,10 1440,25 L1440,0 L0,0 Z" fill="rgba(0,0,0,0.35)" />
+        </svg>
+      </div>
+
+<main className="main-content">
         {pages[activePage]}
       </main>
+
+      <footer className="site-footer">
+        <svg className="footer-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,60 C180,110 360,10 540,60 C720,110 900,10 1080,60 C1260,110 1350,30 1440,60 L1440,120 L0,120 Z" fill="rgba(0,0,0,0.25)" />
+          <path d="M0,80 C200,30 400,110 600,70 C800,30 1000,100 1200,65 C1320,45 1380,85 1440,80 L1440,120 L0,120 Z" fill="rgba(75,156,211,0.3)" />
+          <path d="M0,95 C240,60 480,120 720,90 C960,60 1200,110 1440,95 L1440,120 L0,120 Z" fill="rgba(0,0,0,0.35)" />
+        </svg>
+        <div className="footer-content">
+          <p className="footer-name">Green Wave Consulting, LLC</p>
+          <p className="footer-tagline">Environmental Consulting · Springfield, IL</p>
+          <p className="footer-contact">
+            <a href="tel:2177267569">(217) 726-7569</a>
+            &nbsp;·&nbsp;
+            <a href="mailto:greenwavecon@gmail.com">greenwavecon@gmail.com</a>
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }
