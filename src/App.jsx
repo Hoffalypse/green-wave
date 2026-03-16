@@ -3,20 +3,27 @@ import './App.css'
 
 function HomePage() {
   return (
-    <div className="card">
-      <div className="wave-bar"></div>
-      <div className="content">
-        <h1>Green Wave Consulting</h1>
+    <div className="home-wrapper">
+      <div className="home-hero">
+        <h1 className="home-title">Green Wave Consulting, LLC</h1>
         <div className="divider"></div>
-        <p className="message">Thank you for visiting!</p>
-        <p className="submessage">This site is currently under construction.<br />We appreciate your patience.</p>
-        <p className="address">4440 Ash Grove Drive, Suite A<br />Springfield, IL 62711</p>
-        <a href="tel:2177267569" className="phone-link">
-          <span className="phone-icon">📞</span>
-          (217) 726-7569
-        </a>
+        <p className="home-copy">
+          Green Wave Consulting, LLC has expertise in the field of IEPA LUST compliance. With multiple employees
+          having over 20 years of experience in this field, you can expect professional outcomes on your projects.
+        </p>
       </div>
-      <div className="wave-bar bottom"></div>
+
+      <div className="home-images">
+        <div className="home-img-wrap home-img-left">
+          <img src="/home-1.jpg" alt="Green Wave Consulting" />
+        </div>
+        <div className="home-img-wrap home-img-center">
+          <img src="/home-2.jpg" alt="Green Wave Consulting" />
+        </div>
+        <div className="home-img-wrap home-img-right">
+          <img src="/home-3.jpg" alt="Green Wave Consulting" />
+        </div>
+      </div>
     </div>
   )
 }
@@ -147,20 +154,70 @@ function ContactPage() {
   )
 }
 
-function PlaceholderPage({ title }) {
+const services = [
+  {
+    title: 'Leaking Underground Storage Tanks (LUST)',
+    body: 'Green Wave Consulting, LLC specializes in providing services in Illinois and other surrounding areas related to Leaking Underground Storage Tanks (LUST) and their related remediation, assessment, soil analysis, and other cleanup services needed.',
+    image: '/Leaking.jpg',
+  },
+  {
+    title: 'Due Diligence Phase I/Phase II',
+    body: 'Green Wave Consulting, LLC can assist in all your needs related to property due diligence and property transaction needs. Experience in this area extends to numerous contamination sources and fields.',
+    image: '/due.jpg',
+  },
+  {
+    title: 'Expert Testimony',
+    body: 'Green Wave Consulting, LLC can assist with any legal testimony needed in relation to LUST remediation, assessment, analysis and other services.',
+    image: '/expert.jpg',
+  },
+  {
+    title: 'Additional Services',
+    body: 'Green Wave Consulting, LLC also performs site investigations, emergency response and abatement for gasoline spills and compliance air monitoring.',
+    image: '/additional.jpg',
+  },
+]
+
+function ServicesPage() {
   return (
-    <div className="mission-card">
-      <h2 className="mission-title">{title}</h2>
-      <div className="divider"></div>
-      <p className="mission-text">This page is coming soon. Check back for updates.</p>
+    <div className="services-wrapper">
+      <div className="services-header-card">
+        <h2 className="mission-title">Our Services</h2>
+        <div className="divider"></div>
+        <p className="mission-text">
+          Green Wave Consulting, LLC provides a full range of environmental consulting services across Illinois and surrounding areas.
+        </p>
+      </div>
+
+      <div className="services-grid">
+        {services.map((service, index) => (
+          <div key={service.title} className={`service-card ${index % 2 === 1 ? 'service-card-reverse' : ''}`}>
+            {service.image ? (
+              <div className="service-image-container">
+                <img src={service.image} alt={service.title} className="service-image" />
+              </div>
+            ) : (
+              <div className="service-image-placeholder">
+                <span className="service-image-icon">🌿</span>
+                <span className="service-image-label">Image Coming Soon</span>
+              </div>
+            )}
+            <div className="service-content">
+              <h3 className="service-title">{service.title}</h3>
+              <div className="staff-divider"></div>
+              <p className="staff-bio">{service.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
 
+
 const pages = {
   home: <HomePage />,
   about: <AboutPage />,
-  services: <PlaceholderPage title="Services" />,
+  services: <ServicesPage />,
   mission: <MissionPage />,
   contact: <ContactPage />,
 }

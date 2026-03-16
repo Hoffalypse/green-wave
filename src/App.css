@@ -175,6 +175,116 @@ h1 {
   font-size: 1.1rem;
 }
 
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 960px;
+}
+
+.home-hero {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 56px 48px;
+  text-align: center;
+  width: 100%;
+}
+
+.home-title {
+  color: #ffffff;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin: 0 0 24px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.home-hero .divider {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.home-copy {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.home-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 40px;
+}
+
+.home-img-wrap {
+  width: 300px;
+  height: 210px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.home-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-img-left {
+  transform: rotate(-6deg) translateX(40px) translateY(10px);
+  z-index: 1;
+  position: relative;
+}
+
+.home-img-center {
+  transform: translateY(-24px);
+  z-index: 3;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+.home-img-right {
+  transform: rotate(6deg) translateX(-40px) translateY(10px);
+  z-index: 1;
+  position: relative;
+}
+
+@media (max-width: 720px) {
+  .home-images {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .home-img-left,
+  .home-img-center,
+  .home-img-right {
+    transform: none;
+    width: 100%;
+    max-width: 360px;
+    height: 220px;
+  }
+
+  .home-hero {
+    padding: 36px 24px;
+  }
+
+  .home-title {
+    font-size: 1.9rem;
+  }
+}
+
 .about-wrapper {
   display: flex;
   flex-direction: column;
@@ -289,6 +399,142 @@ h1 {
   .about-header-card,
   .other-employees-card {
     padding: 36px 24px;
+  }
+}
+
+.services-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 960px;
+}
+
+.services-header-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  overflow: hidden;
+}
+
+.service-card-reverse {
+  grid-template-columns: 1fr 280px;
+}
+
+.service-card-reverse .service-image-placeholder,
+.service-card-reverse .service-image-container {
+  order: 2;
+}
+
+.service-card-reverse .service-content {
+  order: 1;
+}
+
+.service-image-placeholder {
+  background: linear-gradient(135deg, #e8f5ee 0%, #d0eadc 100%);
+  border-right: 1px solid #c0ddd0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 200px;
+  padding: 24px;
+}
+
+.service-card-reverse .service-image-placeholder {
+  border-right: none;
+  border-left: 1px solid #c0ddd0;
+}
+
+.service-image-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.service-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-image-icon {
+  font-size: 2.5rem;
+  opacity: 0.6;
+}
+
+.service-image-label {
+  color: #006341;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.service-content {
+  padding: 36px 32px;
+}
+
+.service-title {
+  color: #006341;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  letter-spacing: -0.3px;
+}
+
+@media (max-width: 640px) {
+  .service-card,
+  .service-card-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-reverse .service-image-placeholder {
+    order: 0;
+    border-left: none;
+    border-bottom: 1px solid #c0ddd0;
+  }
+
+  .service-card-reverse .service-content {
+    order: 1;
+  }
+
+  .service-image-placeholder {
+    border-right: none;
+    border-bottom: 1px solid #c0ddd0;
+    min-height: 120px;
+  }
+
+  .services-header-card {
+    padding: 36px 24px;
+  }
+
+  .service-content {
+    padding: 28px 24px;
   }
 }
 
