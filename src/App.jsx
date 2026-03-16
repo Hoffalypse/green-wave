@@ -10,9 +10,10 @@ function App() {
           <div className="divider"></div>
           <p className="message">Thank you for visiting!</p>
           <p className="submessage">This site is currently under construction.<br />We appreciate your patience.</p>
-          <a href="tel:2177252526" className="phone-link">
+          <p className="address">4440 Ash Grove Drive, Suite A<br />Springfield, IL 62711</p>
+          <a href="tel:2177267569" className="phone-link">
             <span className="phone-icon">📞</span>
-            (217) 725-2526
+            (217) 726-7569
           </a>
         </div>
         <div className="wave-bar bottom"></div>
