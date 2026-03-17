@@ -45,7 +45,7 @@ function MissionPage() {
 const staffMembers = [
   {
     name: 'Jeff Wienhoff, PE',
-    bio: 'Jeff has a Bachelor in Science in Chemical Engineering from Tulane University. He is a State of Illinois licensed Professional Engineer and has over 20 years in the industry conducting site investigations and generating Corrective Action Plans. He has been involved in the IEPA LUST remediation program, including Underground Storage Tank assessments and remediation, site investigations, SRP consulting, and site closures. He has also performed due diligence Phase I/Phase II site investigations, emergency response and abatement for gasoline spills, and compliance air monitoring. He is certified as an Underground Storage Tank decommissioner in the State of Illinois and is 40-hour OSHA certified for hazardous waste site work.',
+    bio: 'Jeff has a Bachelor of Science in Chemical Engineering from Tulane University. He is a State of Illinois licensed Professional Engineer and has over 20 years in the industry conducting site investigations and generating Corrective Action Plans. He has been involved in the IEPA LUST remediation program, including Underground Storage Tank assessments and remediation, site investigations, SRP consulting, and site closures. He has also performed due diligence Phase I/Phase II site investigations, emergency response and abatement for gasoline spills, and compliance air monitoring. He is certified as an Underground Storage Tank decommissioner in the State of Illinois and is 40-hour OSHA certified for hazardous waste site work.',
   },
   {
     name: 'Mike Bettenhausen',
@@ -53,15 +53,15 @@ const staffMembers = [
   },
   {
     name: 'Shawn Wolfe',
-    bio: 'Shawn has a Bachelor of Arts from Cornell College. He has nearly 20 years of experience in the environmental consulting industry and has been highly involved in the planning, coordinating and performance of site investigation and corrective action activities associated with contaminant releases for LUST and Site Remediation Programs (SRP) sites. He is a company lead for field techniques, regulatory issues, data analysis and presentation, transportation modeling and technical writing. He has performed several due diligence Phase I/Phase II Environmental Site Assessments for a variety of residential/commercial/industrial sites and has assisted with emergency responses and abatement at gasoline service stations. He is 40-hour OSHA certified for hazardous waste site work.',
+    bio: 'Shawn has a Bachelor of Arts in Geology from Cornell College. He has over 20 years of experience in the environmental consulting industry and has been highly involved in the planning, coordinating and performance of site investigation and corrective action activities associated with contaminant releases for LUST and Site Remediation Programs (SRP) sites. He is a company lead for field techniques, regulatory issues, data analysis and presentation, transportation modeling and technical writing. He has performed due diligence Phase I/Phase II Environmental Site Assessments for a variety of residential/commercial/industrial sites and has assisted with emergency responses and abatement at gasoline service stations. He is 40-hour OSHA certified for hazardous waste site work.',
   },
   {
     name: 'Joe Buhlig',
-    bio: 'Joe has a Bachelor of Science in Environmental Biology from Illinois College. He has nearly ten years of experience in the environmental consulting industry. He has been involved in the IEPA LUST remediation program, including site investigations, Corrective Action Plans and site closures. In addition to LUST work, Joe has also performed Phase I and Phase 2 ESAs and Storm Water Pollution Prevention Plans (SWPPP). He is 40-hour OSHA certified for hazardous waste site work.',
+    bio: 'Joe has a Bachelor of Science in Environmental Biology from Illinois College. He has over ten years of experience in the environmental consulting industry. He has been involved in the IEPA LUST remediation program, including site investigations, Corrective Action Plans and site closures. In addition to LUST work, Joe has also performed Phase I and Phase II ESAs and Storm Water Pollution Prevention Plans (SWPPP). He is 40-hour OSHA certified for hazardous waste site work.',
   },
 ]
 
-const otherEmployees = ['Chris Altman', 'Ben Collette', 'Debi Eggleston', 'David Nowack', 'Ashley Wienhoff, CPA/MBA']
+const otherEmployees = ['Chris Altman', 'Ben Collette', 'Debi Eggleston', 'David Nowack', 'Ashley Wienhoff, CPA/MBA', 'Ryan McCulloch']
 
 function AboutPage() {
   return (
@@ -157,7 +157,7 @@ function ContactPage() {
 const services = [
   {
     title: 'Leaking Underground Storage Tanks (LUST)',
-    body: 'Green Wave Consulting, LLC specializes in providing services in Illinois and other surrounding areas related to Leaking Underground Storage Tanks (LUST) and their related remediation, assessment, soil analysis, and other cleanup services needed.',
+    body: 'Green Wave Consulting, LLC specializes in providing services in Illinois and other surrounding areas related to Leaking Underground Storage Tanks (LUST) and their related remediation, assessment, analysis, and other cleanup services needed.',
     image: '/Leaking.jpg',
   },
   {
