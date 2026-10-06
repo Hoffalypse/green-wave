@@ -116,7 +116,7 @@ function ContactPage() {
           <div className="contact-info-grid">
             <div className="contact-info-block">
               <p className="contact-label">Springfield Office</p>
-              <p className="contact-detail">4440 Ash Grove Dr, Suite A<br />Springfield, IL 62711</p>
+              <p className="contact-detail">3071 Greenhead Dr, Suite B<br />Springfield, IL 62711</p>
             </div>
             <div className="contact-info-block">
               <p className="contact-label">Maple Park Office</p>
@@ -139,7 +139,7 @@ function ContactPage() {
         <div className="contact-map">
           <iframe
             title="Green Wave Consulting - Springfield Office"
-            src="https://www.google.com/maps?q=4440+Ash+Grove+Dr+Suite+A+Springfield+IL+62711&output=embed"
+            src="https://www.google.com/maps?q=3071+Greenhead+Dr+Suite+B+Springfield+IL+62711&output=embed"
             width="100%"
             height="300"
             style={{ border: 0 }}
